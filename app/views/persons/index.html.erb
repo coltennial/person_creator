@@ -1,0 +1,8 @@
+<h1>Persons#index</h1>
+
+<% @persons.each do |person| %>
+  <h2><%= person.name %></h2>
+  <%= link_to 'Show Person', person_path(person) %>
+
+  <p><%= link_to 'New Person', new_person_path %></p>
+<% end %>
