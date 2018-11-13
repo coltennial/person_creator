@@ -20,6 +20,20 @@ class PersonsController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @person = Person.find(params[:id])
+  end
+
+  def update
+    @person = Person.find(params[:id])
+  
+    if @person.update(persons_params)
+      redirect_to persons_path
+    else
+      render :edit
+    end
+  end
  
   private
  

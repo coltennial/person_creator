@@ -1,8 +1,10 @@
-<h1>Persons#index</h1>
+<h1>Persons</h1>
 
 <% @persons.each do |person| %>
   <h2><%= person.name %></h2>
   <%= link_to 'Show Person', person_path(person) %>
 
   <p><%= link_to 'New Person', new_person_path %></p>
+
+  <%= link_to 'Edit person', edit_person_path(person) %>
 <% end %>
